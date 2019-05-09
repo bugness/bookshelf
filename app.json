@@ -1,0 +1,46 @@
+{
+  "name": "tde-laravel-demo",
+  "description": "Latest Laravel with best practices for deployment on Heroku",
+  "keywords": [
+    "laravel"
+  ],
+  "website": "",
+  "repository": "",
+  "logo": "",
+  "env": {
+    "APP_DEBUG": {
+      "value": "true",
+      "required": true
+    },
+    "APP_KEY": {
+      "description": "Run php artisan key:generate --show",
+      "required": true
+    },
+    "LOG_CHANNEL": {
+      "value": "errorlog",
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "hobby"
+    },
+    "scheduler": {
+      "quantity": 1,
+      "size": "hobby"
+    }
+  },
+  "addons": [
+    "heroku-postgresql:hobby-dev",
+    "heroku-redis:hobby-dev"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/php"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
